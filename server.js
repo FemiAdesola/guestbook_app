@@ -28,6 +28,16 @@ async function getMessages() {
   }
 }
 
+// For Saving new message
+async function saveMessage(newMsg) {
+  try {
+    const messages = await getMessages();
+    messages.push(newMsg);
+    await fs.writeFile(DATA_FILE, JSON.stringify(messages, null, 2));
+  } catch (err) {
+    throw err;
+  }
+}
 
 // -------------------- ROUTES --------------------
 
@@ -61,8 +71,40 @@ app.get("/api/messages", async (req, res) => {
 });
 
 
+// Add new message - Updated with validation and error handling
+
+app.post("/api/messages", async (req, res) => {
+  try {
+    const { username, country, message } = req.body;
+
+    if (!username || !country || !message) {
+      return res.status(400).json({ error: "All fields required" });
+    }
+    
+    // For generating new ID
+    const messages = await getMessages();
+    const lastId = messages.length > 0 ? Number(messages[messages.length - 1].id) : 0;
+    //
+
+    // Create new message object
+    const newMsg = {
+        id: lastId + 1,
+        username,
+        country,
+        message,
+        date: new Date().toLocaleString()
+    };
+
+    await saveMessage(newMsg);
+
+    res.json(newMsg);
+  } catch (err) {
+    console.error("❌ Error saving message:", err);
+    res.status(500).json({ error: "Server error while saving message" });
+  }
+});
+
 // Start server
 app.listen(PORT, () => {
   console.log(`✅ Server running at http://localhost:${PORT}`);
 });
-

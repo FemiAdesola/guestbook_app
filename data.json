@@ -33,5 +33,19 @@
     "country": "Uganda",
     "date": "Tue Jul 22 2003 08:53:21 GMT+0300 (FLE Daylight Time)",
     "message": "Anyone from Africa here?"
+  },
+  {
+    "id": 6,
+    "username": "Ade",
+    "country": "Nigeria",
+    "message": "thanks you all",
+    "date": "9/25/2025, 4:07:11 PM"
+  },
+  {
+    "id": 7,
+    "username": "Afe",
+    "country": "Ghana",
+    "message": "Thank you I am from Ghana",
+    "date": "9/25/2025, 4:10:52 PM"
   }
 ]
