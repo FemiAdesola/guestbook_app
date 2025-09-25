@@ -2,7 +2,7 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
-const fs = require("fs");
+const fs = require("fs").promises;
 const path = require("path");
 
 // Initialize Express app
@@ -22,7 +22,8 @@ async function getMessages() {
   try {
     const data = await fs.readFile(DATA_FILE, "utf8");
     return JSON.parse(data);
-  } catch {
+  } catch (err){
+    console.error("Error reading data.json:", err);
     return [];
   }
 }
@@ -51,7 +52,17 @@ app.get("/ajaxmessage", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "html/ajaxmessage.html"));
 });
 
+// -------------------- API ENDPOINTS --------------------
+
+// Get all messages
+app.get("/api/messages", async (req, res) => {
+  const messages = await getMessages();
+  res.json(messages);
+});
+
+
 // Start server
 app.listen(PORT, () => {
   console.log(`✅ Server running at http://localhost:${PORT}`);
 });
+
