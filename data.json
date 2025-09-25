@@ -54,5 +54,19 @@
     "country": "Finland",
     "message": "nice to meet you all",
     "date": "9/25/2025, 8:17:34 PM"
+  },
+  {
+    "id": 9,
+    "username": "Tiina",
+    "country": "Finland",
+    "message": "nice to be here",
+    "date": "9/25/2025, 8:39:31 PM"
+  },
+  {
+    "id": 10,
+    "username": "Olusey",
+    "country": "Nigeria",
+    "message": "Thanks",
+    "date": "9/25/2025, 8:59:44 PM"
   }
 ]

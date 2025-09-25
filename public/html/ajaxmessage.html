@@ -8,6 +8,62 @@
     <title>Ajax Message</title>
 </head>
 <body class="container py-5">
-    <h1>Add a Message (AJAX)</h1>
+   
+<!-- Hero Section -->
+  <header class="bg-warning text-dark text-center py-5 shadow-sm">
+    <h1 class="display-5 fw-bold">⚡ Ajax Guestbook</h1>
+    <p class="lead mb-0">Submit a message instantly without reloading the page</p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container d-flex justify-content-center my-5">
+    <div class="w-100" style="max-width: 700px;">
+
+      <!-- Form Card -->
+      <div class="card shadow-lg mb-4">
+        <div class="card-body">
+          <h2 class="card-title text-center text-warning mb-4">✍️ Add a Message</h2>
+          <form id="ajaxForm">
+            <div class="mb-3">
+              <label for="username" class="form-label fw-bold">👤 Username</label>
+              <input type="text" id="ajaxUsername" class="form-control" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+              <label for="country" class="form-label fw-bold">🌍 Country</label>
+              <input type="text" id="ajaxCountry" class="form-control" placeholder="Enter your country" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label fw-bold">💬 Message</label>
+              <textarea id="ajaxMessage" class="form-control" rows="3" placeholder="Write your message..." required></textarea>
+            </div>
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-outline-warning btn-lg shadow-sm">🚀 Submit via AJAX</button>
+              <a href="/" class="btn btn-outline-secondary btn-lg">⬅️ Back to Home</a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Messages Section -->
+      <div class="card shadow">
+        <div class="card-header bg-dark text-white">
+          <h3 class="h5 mb-0">📖 Messages</h3>
+        </div>
+        <div class="card-body" id="messages">
+          <p class="text-muted">No messages yet. Be the first to post!</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-muted py-3 border-top">
+    <small>Guestbook App by Femi Adesola © 2025 – AJAX Powered Messaging</small>
+  </footer>
+
+  <!-- jQuery + custom script -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/ajaxmessage.js"></script>
 </body>
 </html>
