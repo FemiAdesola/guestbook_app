@@ -8,14 +8,43 @@
     <title>Guestbook Home</title>
 </head>
 <body class="container py-5">
-    <h1>Welcome to the Guestbook</h1>
-    <p>This is the home page of the Node.js Guestbook project.</p>
-    <nav>
-    <a href="/" class="btn btn-primary">Home</a>
-    <a href="/guestbook" class="btn btn-secondary">Guestbook</a>
-    <a href="/newmessage" class="btn btn-success">New Message</a>
-    <a href="/ajaxmessage" class="btn btn-warning">Ajax Message</a>
-  </nav>
+    <!-- Hero Section -->
+  <header class="bg-primary text-white text-center py-5 rounded shadow">
+    <h1 class="display-4 fw-bold">🌍 Welcome to the Guestbook</h1>
+    <p class="lead">Share your thoughts, connect with others, and leave your mark!</p>
+  </header>
+   <main class="container text-center my-5">
+
+    <div class="row justify-content-center g-4">
+      <div class="col-md-3">
+        <a href="/" class="btn btn-lg btn-outline-primary w-100 shadow-sm">🏠 Home</a>
+      </div>
+      <div class="col-md-3">
+        <a href="/guestbook" class="btn btn-lg btn-outline-secondary w-100 shadow-sm">📖 Guestbook</a>
+      </div>
+      <div class="col-md-3">
+        <a href="/newmessage" class="btn btn-lg btn-outline-success w-100 shadow-sm">✍️ New Message</a>
+      </div>
+      <div class="col-md-3">
+        <a href="/ajaxmessage" class="btn btn-lg btn-outline-warning w-100 shadow-sm">⚡ Ajax Message</a>
+      </div>
+    </div>
+<!-- Extra content card -->
+    <div class="card mt-5 shadow">
+      <div class="card-body">
+        <h2 class="card-title">Why Guestbook?</h2>
+        <p class="card-text">
+          This project demonstrates a simple <strong>Node.js + Express</strong> application. 
+          Messages are stored in a JSON file and displayed in different views, 
+          including an AJAX-powered form. Built with Node.js and Bootstrap.
+        </p>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="text-center text-muted py-3 border-top">
+    <small>Guestbook App by Femi Adesola © 2025 – Built with Node.js, Express, and Bootstrap</small>
+  </footer>
     
 </body>
 </html>

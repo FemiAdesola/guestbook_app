@@ -23,6 +23,8 @@ The project uses **Bootstrap** for styling and **jQuery** for AJAX.
 ## Start the server:
 ```bash
     node server.js
+    or 
+    npm start
 ```
 ## Open your browser and go to:
 ```bash
