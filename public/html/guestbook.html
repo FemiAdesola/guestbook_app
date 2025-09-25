@@ -8,19 +8,40 @@
     <title>Guestbook</title>
 </head>
 <body class="container py-5">
-    <h1>Guestbook Messages</h1>
-     <table class="table table-striped" id="messagesTable">
-        <thead>
+      <!-- Header -->
+  <header class="bg-dark text-white text-center py-5 shadow-sm">
+    <h1 class="display-4 fw-bold">📖 Guestbook</h1>
+    <p class="lead mb-0">See what others have shared and leave your own thoughts</p>
+  </header>
+
+  <main class="container my-5">
+
+    <!-- Fancy Table Section -->
+    <div class="card shadow-lg">
+      <div class="card-body p-2">
+        <table class="table table-hover table-striped align-middle mb-0" id="messagesTable">
+          <thead class="table-dark">
             <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Country</th>
-                <th>Message</th>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Country</th>
+              <th scope="col">Message</th>
             </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-    <a href="/" class="btn btn-secondary">Back</a>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Back Button -->
+    <div class="text-center mt-4">
+      <a href="/" class="btn btn-outline-secondary btn-lg">⬅️ Back to Home 🏠</a>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="text-center text-muted py-3 border-top">
+    <small>Guestbook App by Femi Adesola © 2025 – Built with Node.js, Express & Bootstrap</small>
+  </footer>
     <!-- jQuery + custom script -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/js/guestbook.js"></script>

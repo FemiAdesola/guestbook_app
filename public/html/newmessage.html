@@ -8,25 +8,44 @@
     <title>New Message</title>
 </head>
 <body class="container py-5">
-    <h1>P1: Guestbook application</h1>
-    <form id="newMessageForm">
-        <div class="mb-3">
-            <label class="form-label">Username</label>
-            <input type="text" id="username" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Country</label>
-            <input type="text" id="country" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Message</label>
-            <textarea id="message" class="form-control" required></textarea>
-        </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-  <a href="/" class="btn btn-secondary mt-3">Back</a>
+     <!-- Hero Header -->
+  <header class="bg-success text-white text-center py-5 shadow-sm">
+    <h1 class="display-5 fw-bold">✍️ P1: Guestbook application</h1>
+    <p class="lead mb-0">Fill out the form below and share your thoughts</p>
+  </header>
+<!-- Main Content -->
+  <main class="container d-flex justify-content-center my-5">
+    <div class="card shadow-lg w-100" style="max-width: 600px;">
+      <div class="card-body p-4">
+        <h2 class="card-title text-center mb-4 text-success">New Entry</h2>
 
-    <!-- jQuery + custom script -->
+        <!-- Form -->
+        <form id="newMessageForm">
+          <div class="mb-3">
+            <label for="username" class="form-label fw-bold">👤 Username</label>
+            <input type="text" id="username" class="form-control" placeholder="Enter your name" required>
+          </div>
+          <div class="mb-3">
+            <label for="country" class="form-label fw-bold">🌍 Country</label>
+            <input type="text" id="country" class="form-control" placeholder="Where are you from?" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label fw-bold">💬 Message</label>
+            <textarea id="message" class="form-control" rows="4" placeholder="Write your message here..." required></textarea>
+          </div>
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-success btn-lg shadow-sm">✅ Submit Message</button>
+            <a href="/" class="btn btn-outline-secondary btn-lg">⬅️ Back to Home 🏠</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-muted py-3 border-top">
+    <small>Guestbook App by Femi Adesola © 2025 – Add your message and be part of the story</small>
+  </footer>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/newmessage.js"></script>
 </body>
